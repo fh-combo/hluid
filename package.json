@@ -1,0 +1,26 @@
+{
+  "name": "vuepress-cy-biz-comp-book",
+  "version": "1.0.0",
+  "description": "基于vuepress搭建的公司内部用组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fh-combo/vuepress-cy-biz-comp-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fh-combo/vuepress-cy-biz-comp-book/issues"
+  },
+  "homepage": "https://github.com/fh-combo/vuepress-cy-biz-comp-book#readme",
+  "dependencies": {
+    "element-ui": "^2.15.6",
+    "vuepress": "^1.9.7"
+  }
+}
