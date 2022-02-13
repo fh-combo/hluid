@@ -21,6 +21,12 @@
   "homepage": "https://github.com/fh-combo/vuepress-cy-biz-comp-book#readme",
   "dependencies": {
     "element-ui": "^2.15.6",
-    "vuepress": "^1.9.7"
+    "markdown-it-vuese": "^0.4.0",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-demo-code": "^0.6.0",
+    "vuepress-plugin-demo-container-v2": "^2.3.4"
+  },
+  "devDependencies": {
+    "vuepress-plugin-demo-container-v2": "^2.3.4"
   }
 }

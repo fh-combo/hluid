@@ -1,9 +1,15 @@
 
 // 具体配置文档: https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E4%BE%A7%E8%BE%B9%E6%A0%8F
+const webapp =  require('../WEB/sidebar')
 
-
+console.log("webapp;;",webapp)
 module.exports = {
-	
+	// pc端组件合集
+	...webapp,
+
+	// mobile端组件合集
+	// '/APP/': require('../APP/sidebar'),
+
 	// 普通菜单-管控
 	'/guide/': require('../guide/sidebar'),
 
