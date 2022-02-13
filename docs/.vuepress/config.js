@@ -1,13 +1,18 @@
-
+const nodeUtils = require('../topAssets/js/node_utils')
+const ENV = nodeUtils.ENV
 // 具体配置文档: https://vuepress.vuejs.org/zh/guide/
 const path = require("path");
+
+const BaseSortSrc = ENV == 'dev' ? '/' :'.'; // 开发环境跟部署时的基础路径不同
+
 
 module.exports = {
     title: 'HL-UI',
     description: '这是简短描述...',
     // dest: './dist',
     dest: './public',
-    base: './',
+    // base: './',
+    base: BaseSortSrc,
 
     // LOGO大图配置
     head: [
@@ -19,7 +24,8 @@ module.exports = {
     },
 
     themeConfig: {
-        logo: "/images/logo_img.png",
+        // logo: "/images/logo_img.png",
+        logo: ENV == 'dev' ? '/' : `${BaseSortSrc}/`+ `images/logo_img.png`,
         // 右上角导航菜单
         nav: require('./nav'),
 
