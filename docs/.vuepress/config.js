@@ -3,7 +3,7 @@ const ENV = nodeUtils.ENV
 // 具体配置文档: https://vuepress.vuejs.org/zh/guide/
 const path = require("path");
 
-const BaseSortSrc = ENV == 'dev' ? '/' :'.'; // 开发环境跟部署时的基础路径不同
+const BaseSortSrc = ENV == 'dev' ? '/' :'/public/'; // 开发环境跟部署时的基础路径不同
 
 
 module.exports = {
@@ -25,7 +25,7 @@ module.exports = {
 
     themeConfig: {
         // logo: "/images/logo_img.png",
-        logo: ENV == 'dev' ? '/' : `${BaseSortSrc}/`+ `images/logo_img.png`,
+        logo: ENV == 'dev' ? '/images/logo_img.png' : `./images/logo_img.png`,
         // 右上角导航菜单
         nav: require('./nav'),
 
