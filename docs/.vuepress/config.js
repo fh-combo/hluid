@@ -5,7 +5,9 @@ const path = require("path");
 module.exports = {
     title: 'HL-UI',
     description: '这是简短描述...',
-    dest: './dist',
+    // dest: './dist',
+    dest: './public',
+    base: './',
 
     // LOGO大图配置
     head: [
