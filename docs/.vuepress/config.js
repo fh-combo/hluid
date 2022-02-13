@@ -41,7 +41,40 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页 ！'
     },
 
-    plugins: ['demo-container-v2'],
+    plugins: [
+        'demo-container-v2',
+        [
+            'vuepress-plugin-comment',
+            // {
+            //     choosen: 'gitalk',
+            //     options: {
+            //         clientID: 'GitHub Application Client ID',
+            //         clientSecret: 'GitHub Application Client Secret',
+            //         repo: 'GitHub repo',
+            //         owner: 'GitHub repo owner',
+            //         admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+            //         distractionFreeMode: false
+            //     }
+            // }
+            {
+                choosen: 'gitalk',
+                options: {
+                    clientID: 'cb1324ba398628563cac', // 第三方登录 clientID
+                    clientSecret: 'aead3a62912aa9d31110905a37a8a6b30ddf9a16', // 第三方登录 clientSecret
+                    repo: 'vuepressCyBizCompBook_talk', // 你的存储库
+                    owner: 'fh-combo', // 存储库拥有者，填你的 Github 账户
+                    admin: ['fh-combo'], // 对仓库有写权限的人，填你的 Github 账户
+                    pagerDirection: 'last',
+                    id:
+                        '<%- (frontmatter.permalink || frontmatter.to.path || "123456789012345").slice(-16) %>', //  页面的唯一标识,长度不能超过50
+                    title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+                    labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+                    body:
+                        '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname || "123456789012345") %>', // GitHub issue 的内容
+                },
+            },
+        ]
+    ],
     configureWebpack: {
         resolve: {
             alias: {
