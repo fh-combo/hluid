@@ -8,12 +8,9 @@
         "dev": "vuepress dev docs --temp .temp",
         "build": "vuepress build docs"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/fh-combo/vuepress-cy-biz-comp-book.git"
-    },
+    "repository": "git+https://github.com/fh-combo/vuepress-cy-biz-comp-book.git",
     "keywords": [],
-    "author": "",
+    "author": "hawerstar <marklow01@126.com>",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/fh-combo/vuepress-cy-biz-comp-book/issues"
