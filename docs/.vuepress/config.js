@@ -3,7 +3,7 @@ const ENV = nodeUtils.ENV
 // 具体配置文档: https://vuepress.vuejs.org/zh/guide/
 const path = require("path");
 
-const BaseSortSrc = ENV == 'dev' ? '/' :'/public/'; // 开发环境跟部署时的基础路径不同
+const BaseSortSrc = ENV == 'dev' ? '/' :'/'; // 开发环境跟部署时的基础路径不同/public/
 
 
 module.exports = {
